@@ -13,7 +13,7 @@
   "scripts": {
     "build": "rimraf out && mkdir out && esbuild src/extension.js --bundle --minify --format=cjs --platform=node --external:vscode --outfile=out/extension.js && vsce package --no-dependencies --out out/extension.vsix",
     "format": "prettier --write \"src/**/*.js\"",
-    "release": "vsce publish"
+    "release": "vsce publish --no-dependencies"
   },
   "engines": {
     "vscode": "^1.80.0"
