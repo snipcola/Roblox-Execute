@@ -1,9 +1,9 @@
 {
   "name": "roblox-execute",
-  "displayName": "Roblox Execute",
+  "displayName": "Roblox-Execute",
   "author": "Snipcola",
   "publisher": "Snipcola",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Execute scripts in Roblox.",
   "license": "MIT",
   "repository": {
