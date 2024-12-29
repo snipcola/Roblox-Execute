@@ -57,7 +57,7 @@ function addButton(client) {
     arguments: [id],
   };
 
-  number++;
+  if (client) number++;
   buttons.push({
     button,
     id,
