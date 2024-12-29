@@ -53,12 +53,25 @@ Allows for you to execute scripts in Roblox. You still need an executor, of cour
      end
    end
 
+   local function SetPlayerName()
+     local Player = Players.LocalPlayer
+
+     if not Player then
+       Players:GetPropertyChangedSignal("LocalPlayer"):Wait()
+       Player = Players.LocalPlayer
+     end
+
+     if Socket then
+       Socket:Send(Player.Name)
+     end
+   end
+
    local function Connect()
      local Success, _Socket = pcall(WebSocket.connect, Config.Address)
 
      if Success then
        SetSocket(_Socket)
-       Socket:Send(Players.LocalPlayer.Name)
+       SetPlayerName()
        Socket.OnMessage:Connect(OnMessage)
        Socket.OnClose:Wait()
        SetSocket(nil)
