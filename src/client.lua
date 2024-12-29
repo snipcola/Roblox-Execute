@@ -6,6 +6,8 @@ local Config = {
   MinActive = 3000
 }
 
+assert(WebSocket and WebSocket.connect, "Executor doesn't support WebSockets.")
+
 local RunService = game:GetService("RunService")
 local Players = game:GetService("Players")
 
@@ -62,7 +64,7 @@ local function Connect()
 
   if Success then
     SetSocket(_Socket)
-    SetPlayerName()
+    task.spawn(SetPlayerName)
     Socket.OnMessage:Connect(OnMessage)
     Socket.OnClose:Wait()
     SetSocket(nil)

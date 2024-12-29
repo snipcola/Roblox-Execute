@@ -15,6 +15,8 @@ Allows for you to execute scripts in Roblox. You still need an executor, of cour
      MinActive = 3000
    }
 
+   assert(WebSocket and WebSocket.connect, "Executor doesn't support WebSockets.")
+
    local RunService = game:GetService("RunService")
    local Players = game:GetService("Players")
 
@@ -71,7 +73,7 @@ Allows for you to execute scripts in Roblox. You still need an executor, of cour
 
      if Success then
        SetSocket(_Socket)
-       SetPlayerName()
+       task.spawn(SetPlayerName)
        Socket.OnMessage:Connect(OnMessage)
        Socket.OnClose:Wait()
        SetSocket(nil)
