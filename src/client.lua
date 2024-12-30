@@ -28,8 +28,9 @@ local function SetSocket(NewSocket)
   Socket = NewSocket
   SetStore("Socket", NewSocket)
 
-  LastCheck = Socket and tick() - 1 or nil
-  LastActive = Socket and tick() or nil
+  local Now = tick()
+  LastCheck = Socket and Now - 1 or nil
+  LastActive = Socket and Now or nil
 end
 
 local function OnMessage(Text)
@@ -85,8 +86,8 @@ local function Check()
   elseif Socket and TimeElapsed(LastActive, Config.MinActive) then
     Socket:Close()
   elseif Socket and TimeElapsed(LastCheck, Config.PingInterval) then
-    Socket:Send(`{Config.Name}-Ping`)
     LastCheck = tick()
+    Socket:Send(`{Config.Name}-Ping`)
   end
 end
 
