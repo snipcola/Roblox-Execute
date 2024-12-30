@@ -3,8 +3,9 @@
   "displayName": "Roblox-Execute",
   "author": "Snipcola",
   "publisher": "Snipcola",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Execute scripts in Roblox.",
+  "icon": "assets/icon.png",
   "license": "MIT",
   "repository": {
     "type": "git",
