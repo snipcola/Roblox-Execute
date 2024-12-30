@@ -40,7 +40,7 @@ local function OnMessage(Text)
     local Callback, Error = loadstring(Text)
 
     if Error then
-      error(Error)
+      error(Error, 2)
     end
 
     task.spawn(Callback)
