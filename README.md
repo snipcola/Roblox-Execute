@@ -116,3 +116,17 @@ Allows for you to execute scripts in Roblox. You still need an executor, of cour
    ```
 
 2. Ensure this extension is installed, your IDE is open, and attach.
+
+3. On the bottom left of your IDE, you should see the client(s) connected.
+
+   Ensure the file extension is one of the following:
+
+   - `luau`
+   - `lua`
+   - `txt`
+
+   Or, alternatively, make sure the tabs language is set to:
+
+   - `luau`
+   - `lua`
+   - `plaintext` (default)
