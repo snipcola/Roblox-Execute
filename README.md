@@ -12,7 +12,7 @@ Allows for you to execute scripts in Roblox. You still need an executor, of cour
      Address = "ws://127.0.0.1:53203",
      CheckInterval = 1000,
      PingInterval = 1000,
-     MinActive = 3000
+     MinActive = 3000,
    }
 
    assert(WebSocket and WebSocket.connect, "Executor doesn't support WebSockets.")
@@ -111,7 +111,7 @@ Allows for you to execute scripts in Roblox. You still need an executor, of cour
      ExistingSocket:Close()
    end
 
-   local Connection = RunService.Heartbeat:Connect(Check)
+   local Connection = RunService.RenderStepped:Connect(Check)
    SetStore("Connection", Connection)
    ```
 
@@ -125,7 +125,7 @@ Allows for you to execute scripts in Roblox. You still need an executor, of cour
    - `lua`
    - `txt`
 
-   Or, alternatively, make sure the tabs language is set to:
+   Or, alternatively, ensure the tabs language is set to:
 
    - `luau`
    - `lua`

@@ -11,8 +11,8 @@ const config = {
     priority: -10,
   },
   port: 53203,
-  extensions: ["lua", "luau", "txt"],
-  languages: ["lua", "luau", "plaintext"],
+  extensions: ["luau", "lua", "txt"],
+  languages: ["luau", "lua", "plaintext"],
   interval: 500,
   minActive: 3000,
 };
