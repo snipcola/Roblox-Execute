@@ -1,7 +1,7 @@
 const vscode = require("vscode");
 const path = require("path");
 const WebSocket = require("ws");
-const { v4: uuid } = require("uuid");
+const { ulid } = require("ulidx");
 
 const config = {
   name: "RobloxExecute",
@@ -124,7 +124,7 @@ function initialize() {
   server = new WebSocket.Server({ port: config.port });
 
   server.on("connection", function (client) {
-    const id = uuid();
+    const id = ulid();
     let pingTimeout;
 
     function setPingTimeout() {
