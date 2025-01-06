@@ -76,7 +76,7 @@ Allows for you to execute scripts in Roblox. You still need an executor, of cour
        Socket.OnMessage:Connect(OnMessage)
        Socket.OnClose:Wait()
        SetSocket(nil)
-     elseif NewSocket then
+     elseif Success and NewSocket then
        NewSocket:Close()
      end
 

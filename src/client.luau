@@ -67,7 +67,7 @@ local function Connect()
 		Socket.OnMessage:Connect(OnMessage)
 		Socket.OnClose:Wait()
 		SetSocket(nil)
-	elseif NewSocket then
+	elseif Success and NewSocket then
 		NewSocket:Close()
 	end
 
