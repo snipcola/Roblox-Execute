@@ -3,7 +3,7 @@
   "displayName": "Roblox-Execute",
   "author": "Snipcola",
   "publisher": "Snipcola",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Execute scripts in Roblox.",
   "icon": "assets/icon.png",
   "license": "MIT",
@@ -24,7 +24,7 @@
   ],
   "main": "out/extension.js",
   "devDependencies": {
-    "@vscode/vsce": "3.2.1",
+    "@vscode/vsce": "3.2.2",
     "esbuild": "0.24.2",
     "prettier": "3.4.2",
     "rimraf": "6.0.1"
