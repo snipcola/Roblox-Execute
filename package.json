@@ -9,7 +9,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://git.snipcola.com/snipcola/Roblox-Execute.git"
+    "url": "https://code.snipcola.st/snipcola/Roblox-Execute"
   },
   "scripts": {
     "build": "rimraf out && mkdir out && esbuild src/extension.js --bundle --minify --format=cjs --platform=node --external:vscode --outfile=out/extension.js && vsce package --no-dependencies --out out/extension.vsix",
